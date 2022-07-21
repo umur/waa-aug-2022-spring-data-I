@@ -1,6 +1,5 @@
 package miu.edu.lab03.service;
 
-import miu.edu.lab03.model.Category;
 import miu.edu.lab03.model.Product;
 
 import java.util.List;

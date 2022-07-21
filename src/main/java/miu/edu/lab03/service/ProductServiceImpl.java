@@ -1,7 +1,6 @@
 package miu.edu.lab03.service;
 
 import lombok.RequiredArgsConstructor;
-import miu.edu.lab03.model.Category;
 import miu.edu.lab03.model.Product;
 import miu.edu.lab03.repository.CategoryRepository;
 import miu.edu.lab03.repository.ProductRepository;
