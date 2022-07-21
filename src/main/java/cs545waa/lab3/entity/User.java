@@ -1,5 +1,6 @@
 package cs545waa.lab3.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ public class User {
     @OneToOne
     private Address address;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "user")
     private List<Review> reviews;
 }

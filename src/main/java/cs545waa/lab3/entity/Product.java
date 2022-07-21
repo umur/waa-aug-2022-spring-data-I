@@ -1,9 +1,11 @@
 package cs545waa.lab3.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,4 +20,8 @@ public class Product {
     @JsonManagedReference
     @ManyToOne
     private Category category;
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "product")
+    private List<Review> reviews;
 }

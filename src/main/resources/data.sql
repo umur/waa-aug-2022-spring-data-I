@@ -17,5 +17,5 @@ INSERT INTO public.address (id, city, street, zip) VALUES (3, 'Boston', '140 Bay
 INSERT INTO public.users (id, email, first_name, last_name, password, address_id) VALUES (1, 'alikhan.amandyk@miu.edu', 'Alikhan', 'Amandyl', '1', 1);
 INSERT INTO public.users (id, email, first_name, last_name, password, address_id) VALUES (2, 'jamkhurbek.islomov@miu.edu', 'Jamkhurbek', 'Islomov', '2', 2);
 
-INSERT INTO public.review (id, comment, user_id) VALUES (1, 'Great product', 1);
-INSERT INTO public.review (id, comment, user_id) VALUES (2, 'Not so great', 2);
+INSERT INTO public.review (id, comment, product_id, user_id) VALUES (1, 'Great product', 1, 1);
+INSERT INTO public.review (id, comment, product_id, user_id) VALUES (2, 'Not so great', 6, 2);

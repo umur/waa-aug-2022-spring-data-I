@@ -1,5 +1,6 @@
 package cs545waa.lab3.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -13,6 +14,11 @@ public class Review {
 
     private String comment;
 
+    @JsonManagedReference
     @ManyToOne
     private User user;
+
+    @JsonManagedReference
+    @ManyToOne
+    private Product product;
 }
