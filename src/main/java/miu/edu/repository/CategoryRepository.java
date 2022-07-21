@@ -1,0 +1,7 @@
+package miu.edu.repository;
+
+import miu.edu.entity.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Integer> {
+}
