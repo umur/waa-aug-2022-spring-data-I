@@ -1,6 +1,7 @@
 package edu.miu.demo.spring.data.lab3.models;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,6 +29,7 @@ public class User {
     @JoinColumn(name="address_id", referencedColumnName = "id")
     private Address address;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "user")
     private List<Review> reviews;
 }

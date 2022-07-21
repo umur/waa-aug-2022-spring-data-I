@@ -1,5 +1,6 @@
 package edu.miu.demo.spring.data.lab3.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ public class Review {
     private int id;
     private String comment;
 
+    @JsonBackReference
     @ManyToOne
     private User user;
 
