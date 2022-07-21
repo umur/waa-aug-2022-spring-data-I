@@ -22,4 +22,8 @@ spring:
       mode: always
 
 server:
-  port: 8080
+  port: 8082
+
+mvc:
+  pathmatch:
+    matching-strategy: ant_path_matcher
