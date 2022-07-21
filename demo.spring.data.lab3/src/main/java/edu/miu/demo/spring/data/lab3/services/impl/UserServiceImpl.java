@@ -1,6 +1,7 @@
 package edu.miu.demo.spring.data.lab3.services.impl;
 
 import edu.miu.demo.spring.data.lab3.dtos.UserDto;
+import edu.miu.demo.spring.data.lab3.models.User;
 import edu.miu.demo.spring.data.lab3.repos.UserRepo;
 import edu.miu.demo.spring.data.lab3.services.UserService;
 import org.modelmapper.ModelMapper;
@@ -29,16 +30,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void save(UserDto userDto) {
-
-    }
-
-    @Override
-    public void update(UserDto userDto) {
-
+        userRepo.save(modelMapper.map(userDto, User.class));
     }
 
     @Override
     public void delete(int id) {
-
+        userRepo.deleteById(id);
     }
 }

@@ -7,6 +7,5 @@ import java.util.List;
 public interface UserService {
     public List<UserDto> getAll();
     public void save(UserDto userDto);
-    public void update(UserDto userDto);
     public void delete(int id);
 }

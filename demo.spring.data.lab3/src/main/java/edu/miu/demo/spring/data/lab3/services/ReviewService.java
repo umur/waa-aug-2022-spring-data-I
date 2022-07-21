@@ -7,6 +7,5 @@ import java.util.List;
 public interface ReviewService {
     public List<ReviewDto> getAll();
     public void save(ReviewDto reviewDto);
-    public void update(ReviewDto reviewDto);
     public void delete(int id);
 }
