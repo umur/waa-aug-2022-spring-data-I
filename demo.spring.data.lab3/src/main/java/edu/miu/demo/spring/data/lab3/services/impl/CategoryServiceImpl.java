@@ -30,5 +30,11 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepo.save(newCategory);
     }
 
+//    @Override
+//    public CategoryDto update(CategoryDto categoryDto, int id) {
+//        var category = categoryRepo.update(new Category(categoryDto.getId(), categoryDto.getName()),id);
+//        return new CategoryDto(category.getId(), category.getName());
+//    }
+
 
 }

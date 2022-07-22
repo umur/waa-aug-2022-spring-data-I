@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api/category")
 @AllArgsConstructor
 public class CategoryController {
     private final CategoryService categoryService;
@@ -26,6 +26,11 @@ public class CategoryController {
         categoryService.save(categoryDto);
         return new ResponseEntity("Added category successfully", HttpStatus.CREATED);
     }
+//    @PutMapping("/{id}")
+//    public ResponseEntity<CategoryDto> update(@RequestBody CategoryDto categoryDto, @PathVariable int id){
+//        var updateCategory = categoryService.update(categoryDto, id);
+//        return ResponseEntity.ok(updateCategory);
+//    }
 
 
 }
