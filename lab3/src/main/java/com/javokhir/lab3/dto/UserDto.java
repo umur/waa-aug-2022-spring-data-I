@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -23,5 +24,5 @@ public class UserDto {
 
     private AddressDto address;
 
-    private List<ReviewDto> reviews;
+    private List<ReviewDto> reviews = new ArrayList<>();
 }
