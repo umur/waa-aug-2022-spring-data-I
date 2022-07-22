@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "b957dc3c-a3de-4e68-92fd-9444698a880e",
+		"name": "reviews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/reviews",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Abdullah1657278450521",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/reviews",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comment\": \"asdasdsad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/reviews",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"comment\": \"asdasdsad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/reviews/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/reviews/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
