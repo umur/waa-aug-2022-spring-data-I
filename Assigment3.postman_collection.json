@@ -1,0 +1,461 @@
+{
+	"id": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+	"name": "Assigment3",
+	"description": "",
+	"order": [
+		"512e3316-6c42-e22f-6d9a-f1067fc78327",
+		"dcad4395-f876-0ff9-5dd1-85f087629b03",
+		"a3609eb4-4f23-19d1-a29d-35ad3c60df04",
+		"c03bcdd5-3cb0-f4cc-bff5-e537f30a187e",
+		"f7279cab-f08d-e9f4-2918-faf80242f20e",
+		"ea9dd698-9e0d-23c8-62cb-ab39ab8c6723",
+		"47849335-ee1c-b8bc-d3f6-67bd2a9e47c3",
+		"8ff2bf94-4bcf-597c-2e95-22648c5163ae",
+		"1e6fe5f5-b9e5-3574-31ed-36b213e73229",
+		"5b8b14c3-43c0-8b03-7141-d21e1439284e",
+		"42422fe2-3dbc-33f7-64a4-7185bfdbb5e1"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1658465459523,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "1e6fe5f5-b9e5-3574-31ed-36b213e73229",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/product/findByMinPrice?minPrice=50",
+			"queryParams": [
+				{
+					"key": "minPrice",
+					"value": "50",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "findProductsByPriceGreaterThan",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658533067215,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"id\": 2,\n    \"firstName\": \"Jh\",\n    \"lastName\": \"Ka\",\n    \"email\": \"jharna@gmail.com\",\n    \"major\": \"compro\",\n    \"gpa\": 0,\n    \"coursesTaken\": [\n        {\n            \"id\": 1,\n            \"name\": \"MWA\",\n            \"code\": \"CS-540\",\n            \"deleted\": false\n        }\n    ],\n    \"deleted\": false\n}"
+		},
+		{
+			"id": "42422fe2-3dbc-33f7-64a4-7185bfdbb5e1",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/product/findByNameContains?keyword=Pant",
+			"queryParams": [
+				{
+					"key": "keyword",
+					"value": "Pant",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "findByNameContains",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658533581295,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"id\": 2,\n    \"firstName\": \"Jh\",\n    \"lastName\": \"Ka\",\n    \"email\": \"jharna@gmail.com\",\n    \"major\": \"compro\",\n    \"gpa\": 0,\n    \"coursesTaken\": [\n        {\n            \"id\": 1,\n            \"name\": \"MWA\",\n            \"code\": \"CS-540\",\n            \"deleted\": false\n        }\n    ],\n    \"deleted\": false\n}"
+		},
+		{
+			"id": "47849335-ee1c-b8bc-d3f6-67bd2a9e47c3",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/users",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "PostUser",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658471485767,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n      \n        \"email\": \"jas@gmail.com\",\n        \"password\": \"123\",\n        \"firstName\": \"jas\",\n        \"lastName\": \"karki\"\n        \n         \n    }"
+		},
+		{
+			"id": "512e3316-6c42-e22f-6d9a-f1067fc78327",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/category",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "PostCategory",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658470322825,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"id\": 1,\n    \"name\":\"Women\"\n    \n}"
+		},
+		{
+			"id": "5b8b14c3-43c0-8b03-7141-d21e1439284e",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/product/findByCatAndMaxPrice?category=1&&maxPrice=50",
+			"queryParams": [
+				{
+					"key": "category",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "maxPrice",
+					"value": "50",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "FndByCategoryIdAndMaxPrice",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658533276528,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"id\": 2,\n    \"firstName\": \"Jh\",\n    \"lastName\": \"Ka\",\n    \"email\": \"jharna@gmail.com\",\n    \"major\": \"compro\",\n    \"gpa\": 0,\n    \"coursesTaken\": [\n        {\n            \"id\": 1,\n            \"name\": \"MWA\",\n            \"code\": \"CS-540\",\n            \"deleted\": false\n        }\n    ],\n    \"deleted\": false\n}"
+		},
+		{
+			"id": "8ff2bf94-4bcf-597c-2e95-22648c5163ae",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/users",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "getUser",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658471510735,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n      \n        \"email\": \"jas@gmail.com\",\n        \"password\": \"123\",\n        \"firstName\": \"jas\",\n        \"lastName\": \"karki\"\n        \n         \n    }"
+		},
+		{
+			"id": "a3609eb4-4f23-19d1-a29d-35ad3c60df04",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/product",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "PostProduct",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658470804920,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": " {\n        \n        \"name\": \"Pant\",\n        \"price\": 70,\n        \"categoryId\": 1,\n        \"categoryName\": \"Women\"\n    }"
+		},
+		{
+			"id": "c03bcdd5-3cb0-f4cc-bff5-e537f30a187e",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/product",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "GetAllProduct",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658470823702,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": " {\n        \n        \"name\": \"Pant\",\n        \"price\": 70,\n        \"categoryId\": 1,\n        \"categoryName\": \"Women\"\n    }"
+		},
+		{
+			"id": "dcad4395-f876-0ff9-5dd1-85f087629b03",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/category",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "GetAllCategory",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1658470360724,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n    \"id\": 2,\n    \"name\":\"Men\"\n    \n}"
+		},
+		{
+			"id": "ea9dd698-9e0d-23c8-62cb-ab39ab8c6723",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658471423271,
+			"name": "PostAllAddress",
+			"description": "",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"responses": [],
+			"rawModeData": "{\n      \n        \"email\": \"jas@gmail.com\",\n        \"password\": \"123\",\n        \"firstName\": \"jas\",\n        \"lastName\": \"karki\",\n        \"address_id\": 3\n         \n    }"
+		},
+		{
+			"id": "f7279cab-f08d-e9f4-2918-faf80242f20e",
+			"headers": "Content-Type: application/json\nauthorization: Bearer jharna23\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "authorization",
+					"value": "Bearer jharna23",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/address",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658470958351,
+			"name": "GetAllAddress",
+			"description": "",
+			"collectionId": "dfe093ec-62cd-70a4-e9f6-ad2abb021a08",
+			"responses": [],
+			"rawModeData": "{\n        \n        \"street\": \"200\",\n        \"zip\": 522575,\n        \"city\": \"Fairfield\"\n    }"
+		}
+	]
+}
