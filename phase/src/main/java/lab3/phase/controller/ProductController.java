@@ -38,4 +38,19 @@ public class ProductController {
     public Boolean delete(@PathVariable int id) {
         return serv.delete(id);
     }
+
+    @GetMapping("/findProductByPriceGreaterThan/{price}")
+    public List<ProductDTO> findProductByPriceGreaterThan(@PathVariable float price) {
+        return serv.findProductByPriceGreaterThan(price);
+    }
+
+    @GetMapping("/findProductByCategoryAndPriceLessThan/{catId}/{price}")
+    public List<ProductDTO> findProductByCategoryAndPriceLessThan(@PathVariable int catId, @PathVariable int price) {
+        return serv.findProductByCategoryAndPriceLessThan(catId, price);
+    }
+
+    @GetMapping("/findProductByNameContaining/{name}")
+    public List<ProductDTO> findProductByNameContaining(@PathVariable String name) {
+        return serv.findProductByNameContaining(name);
+    }
 }
