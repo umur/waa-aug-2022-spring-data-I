@@ -1,5 +1,7 @@
 package edu.miu.demo.spring.data.lab3.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +20,8 @@ public class Product {
     private String name;
     private float price;
     private int rating;
+
+    @JsonBackReference
     @ManyToOne
     private Category category;
 }
