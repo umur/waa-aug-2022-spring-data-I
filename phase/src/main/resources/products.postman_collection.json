@@ -101,6 +101,67 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "localhost:8080/products/findProductByPriceGreaterThan/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/findProductByPriceGreaterThan/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"findProductByPriceGreaterThan",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/findProductByCategoryAndPriceLessThan/1/200",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/findProductByCategoryAndPriceLessThan/1/200",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"findProductByCategoryAndPriceLessThan",
+						"1",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/findProductByNameContaining/asd",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/findProductByNameContaining/asd",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"findProductByNameContaining",
+						"asd"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
