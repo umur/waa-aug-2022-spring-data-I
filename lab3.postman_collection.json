@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "9e04797e-ab7f-4466-af51-36bde46a0459",
+		"name": "lab3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "627016"
+	},
+	"item": [
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "tina:1657401464531",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"disabled": true
+					},
+					{
+						"key": "session",
+						"value": "tina:1657338128492",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"name\": \"Iphone\",\n    \"price\":809.99,\n    \"rating\":4.9,\n    \"category\": {\n        \"id\":1,\n        \"name\":\"Electronics\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "tina:1657401464531",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"disabled": true
+					},
+					{
+						"key": "session",
+						"value": "tina:1657338128492",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"email\": \"javokhir.mamadiyarov@miu.edu\",\n    \"password\": \"1234567\",\n    \"firstName\": \"Javokhir\",\n    \"lastName\": \"Mamadiyarov\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"email\": \"azizbek.mamadiyarov@miu.edu\",\n        \"password\": \"123456\",\n        \"firstName\": \"Aziz\",\n        \"lastName\": \"Mamadiyarov\",\n        \"address\": {\n            \"street\": \"1000 N 4 ST\",\n            \"zip\": \"52557\",\n            \"city\": \"Fairfield\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"email\": \"azizbek.mamadiyarov@miu.edu\",\n        \"password\": \"123456\",\n        \"firstName\": \"Aziz\",\n        \"lastName\": \"Mamadiyarov\",\n        \"address\": {\n            \"street\": \"1000 N 4 ST\",\n            \"zip\": \"52557\",\n            \"city\": \"Fairfield\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"email\": \"azizbek.mamadiyarov@miu.edu\",\n        \"password\": \"123456\",\n        \"firstName\": \"Aziz\",\n        \"lastName\": \"Mamadiyarov\",\n        \"address\": {\n            \"street\": \"1000 N 4 ST\",\n            \"zip\": \"52557\",\n            \"city\": \"Fairfield\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "tina:1657401464531",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"disabled": true
+					},
+					{
+						"key": "session",
+						"value": "tina:1657338128492",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ipad\",\n    \"price\":699.99,\n    \"rating\":4.7,\n    \"category\": {\n        \"id\":1,\n        \"name\":\"Electronics\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "tina:1657401464531",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"disabled": true
+					},
+					{
+						"key": "session",
+						"value": "tina:1657338128492",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 20,\n    \"name\": \"Ipad\",\n    \"price\": 679.99,\n    \"rating\": 4.7,\n    \"category\": {\n        \"id\": 1,\n        \"name\": \"Electronics\",\n        \"products\": []\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductById",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "tina:1657401464531",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"disabled": true
+					},
+					{
+						"key": "session",
+						"value": "tina:1657338128492",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 20,\n    \"name\": \"Ipad\",\n    \"price\": 679.99,\n    \"rating\": 4.7,\n    \"category\": {\n        \"id\": 1,\n        \"name\": \"Electronics\",\n        \"products\": []\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/find-by-name?name=Iph",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"find-by-name"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Iph"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findProductByMinPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/find-by-min-price?minPrice=102.3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"find-by-min-price"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "102.3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findProductByCategoryAndMaxPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/categories/1/products/find-by-max-price?maxPrice=2500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categories",
+						"1",
+						"products",
+						"find-by-max-price"
+					],
+					"query": [
+						{
+							"key": "maxPrice",
+							"value": "2500"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
