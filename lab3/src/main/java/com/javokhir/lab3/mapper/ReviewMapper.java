@@ -6,14 +6,17 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {UserMapper.class, ProductMapper.class})
 public interface ReviewMapper {
 
     Review fromDto(ReviewDto dto);
 
+    @Mapping(target = "user", qualifiedByName = "excludeRelationsUser")
+    @Mapping(target = "product", qualifiedByName = "excludeRelationsProduct")
     ReviewDto toDto(Review review);
 
-    @Named("excludeUser")
+    @Named("excludeRelationsReview")
     @Mapping(target = "user", ignore = true)
-    ReviewDto excludeUser(Review review);
+    @Mapping(target = "product", ignore = true)
+    ReviewDto excludeRelationsReview(Review review);
 }

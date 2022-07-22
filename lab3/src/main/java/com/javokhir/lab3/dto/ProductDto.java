@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,4 +21,6 @@ public class ProductDto {
     private Double rating;
 
     private CategoryDto category;
+
+    private List<ReviewDto> reviews;
 }

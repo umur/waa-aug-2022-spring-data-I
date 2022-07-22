@@ -14,4 +14,6 @@ public class ReviewDto {
     private String comment;
 
     private UserDto user;
+
+    private ProductDto product;
 }

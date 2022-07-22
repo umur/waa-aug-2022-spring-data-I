@@ -6,11 +6,12 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {ProductMapper.class})
 public interface CategoryMapper {
 
     Category fromDto(CategoryDto dto);
 
+    @Mapping(target = "products", qualifiedByName = "excludeRelationsProduct")
     CategoryDto toDto(Category category);
 
     @Named("excludeProduct")

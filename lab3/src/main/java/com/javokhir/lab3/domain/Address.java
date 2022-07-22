@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,6 +31,6 @@ public class Address {
 
     private String city;
 
-    @OneToOne(mappedBy = "address")
+    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL)
     private User user;
 }

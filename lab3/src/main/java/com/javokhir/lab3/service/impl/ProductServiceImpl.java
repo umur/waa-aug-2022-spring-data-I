@@ -43,4 +43,19 @@ public class ProductServiceImpl implements ProductService {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public List<ProductDto> getByMinPrice(Double minPrice) {
+        return repository.findAllByMinPrice(minPrice).stream().map(mapper::toDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductDto> getByCategoryAndMaxPrice(Long categoryId, double maxPrice) {
+        return repository.findAllByCategoryIdAndMaxPrice(categoryId, maxPrice).stream().map(mapper::toDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductDto> getByName(String name) {
+        return repository.findProductsByNameContainingIgnoreCase(name).stream().map(mapper::toDto).collect(Collectors.toList());
+    }
 }

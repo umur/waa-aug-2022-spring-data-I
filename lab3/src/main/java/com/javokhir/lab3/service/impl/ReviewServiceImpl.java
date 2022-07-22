@@ -43,4 +43,9 @@ public class ReviewServiceImpl implements ReviewService {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public List<ReviewDto> getAllByProductId(Long productId) {
+        return repository.findAllByProductId(productId).stream().map(mapper::toDto).collect(Collectors.toList());
+    }
 }
