@@ -1,12 +1,8 @@
 package lab.waa.three.databasedemo.service.impl;
 
 import lab.waa.three.databasedemo.dto.ReviewDto;
-import lab.waa.three.databasedemo.dto.ReviewDto;
-import lab.waa.three.databasedemo.mapper.CategoryMapper;
 import lab.waa.three.databasedemo.mapper.ReviewMapper;
-import lab.waa.three.databasedemo.reposoitory.CategoryRepository;
 import lab.waa.three.databasedemo.reposoitory.ReviewRepository;
-import lab.waa.three.databasedemo.service.CategoryService;
 import lab.waa.three.databasedemo.service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import lombok.var;
