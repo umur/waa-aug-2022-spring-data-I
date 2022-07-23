@@ -1,0 +1,11 @@
+INSERT INTO address (id, city, street, zip) VALUES (nextval('address_id_seq'), 'Fairfield', 'N 6th St', '52556');
+INSERT INTO user_table (id, email, firstname, lastname, password, address_id) VALUES (nextval('user_table_id_seq'), 'esaintor@gmail.com', 'Saintur', 'Batkhuu', 'P@ssw0rd', 1);
+INSERT INTO category (id, name) VALUES (nextval('category_id_seq'), 'Mobile');
+INSERT INTO category (id, name) VALUES (nextval('category_id_seq'), 'Tablet');
+INSERT INTO category (id, name) VALUES (nextval('category_id_seq'), 'Laptop');
+INSERT INTO product (id, name, price, rating, category_id) VALUES (nextval('product_id_seq'), 'iPhone 12 Pro', 999, 1, 1);
+INSERT INTO product (id, name, price, rating, category_id) VALUES (nextval('product_id_seq'), 'iPad Air 4th Gen', 599, 2, 2);
+INSERT INTO product (id, name, price, rating, category_id) VALUES (nextval('product_id_seq'), 'Macbook Pro 14" 2021', 2000, 3, 3);
+INSERT INTO public.review (id, comment, product_id, user_id) VALUES (nextval('review_id_seq'), 'Nice product', 1, 1);
+INSERT INTO public.review (id, comment, product_id, user_id) VALUES (nextval('review_id_seq'), 'Great product', 2, 1);
+INSERT INTO public.review (id, comment, product_id, user_id) VALUES (nextval('review_id_seq'), 'Yes good one', 3, 1);
