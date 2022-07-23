@@ -1,12 +1,13 @@
-package lab.waa.three.databasedemo.entity;
+package lab.waa.three.databasedemo.dto;
 
+import lab.waa.three.databasedemo.entity.User;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Data
 @Entity
-public class Address {
+public class AddressDto {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
   private int id;

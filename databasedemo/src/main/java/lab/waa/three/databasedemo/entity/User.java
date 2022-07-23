@@ -25,8 +25,8 @@ public class User {
 
   @JsonBackReference
   @OneToMany(mappedBy = "user")
-  List<Review> reviews;
+  private List<Review> reviews;
 
-  @OneToOne
-  Address address;
+  @OneToOne(mappedBy = "user")
+  private Address address;
 }
