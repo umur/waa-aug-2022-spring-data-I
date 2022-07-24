@@ -1,9 +1,13 @@
 package lab.waa.three.databasedemo.service.impl;
 
 import lab.waa.three.databasedemo.dto.ReviewDto;
+import lab.waa.three.databasedemo.entity.Review;
+import lab.waa.three.databasedemo.entity.User;
 import lab.waa.three.databasedemo.mapper.ReviewMapper;
+import lab.waa.three.databasedemo.mapper.UserMapper;
 import lab.waa.three.databasedemo.reposoitory.ReviewRepository;
 import lab.waa.three.databasedemo.service.ReviewService;
+import lab.waa.three.databasedemo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.var;
 import org.springframework.stereotype.Service;
@@ -16,10 +20,15 @@ import java.util.List;
 public class ReviewServiceImpl implements ReviewService {
   private final ReviewRepository repository;
   private final ReviewMapper mapper;
+  private final UserMapper userMapper;
+  private final UserService userService;
 
   @Override
   public void save(ReviewDto dto) {
-    repository.save(mapper.toModel(dto));
+    User user = userMapper.toModel(userService.findById(dto.getUserId()));
+    Review review = mapper.toModel(dto);
+    review.setUser(user);
+    repository.save(review);
   }
 
   @Override

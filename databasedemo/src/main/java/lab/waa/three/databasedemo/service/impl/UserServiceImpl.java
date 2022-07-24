@@ -5,7 +5,6 @@ import lab.waa.three.databasedemo.entity.User;
 import lab.waa.three.databasedemo.mapper.UserMapper;
 import lab.waa.three.databasedemo.reposoitory.UserRepository;
 import lab.waa.three.databasedemo.service.UserService;
-import lombok.RequiredArgsConstructor;
 import lombok.var;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public void save(UserDto userDto) {
-    userRepository.save(userMapper.toUser(userDto));
+    userRepository.save(userMapper.toModel(userDto));
   }
 
   @Override
@@ -34,17 +33,15 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public void update(int id, UserDto userDto) {
-    userRepository.save(userMapper.toUser(userDto));
+    userRepository.save(userMapper.toModel(userDto));
   }
 
   @Override
   public List<UserDto> findAll() {
-    System.out.println("User get------");
     var users = new ArrayList<UserDto>();
     var data = userRepository.findAll();
 
     data.forEach(user -> users.add(userMapper.toDTO(user)));
-    System.out.println("User get------"+ users.toString());
 
     return users;
   }

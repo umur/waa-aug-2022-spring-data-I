@@ -1,16 +1,15 @@
 package lab.waa.three.databasedemo.dto;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lab.waa.three.databasedemo.entity.Category;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Data
-@Entity
+@Schema(description = "User Dto")
 public class ProductDto {
-  @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
   private int id;
 
   private String name;
@@ -18,7 +17,5 @@ public class ProductDto {
   private double price;
   private float rating;
 
-  @JsonManagedReference
-  @ManyToOne
   private Category category;
 }

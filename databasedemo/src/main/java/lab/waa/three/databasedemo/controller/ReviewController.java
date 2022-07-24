@@ -29,7 +29,7 @@ public class ReviewController {
 
   @PostMapping
   public ResponseEntity<Void> save(@RequestBody ReviewDto dto) {
-
+    System.out.print("Dto...."+dto.toString());
     service.save(dto);
     return new ResponseEntity<Void>(HttpStatus.CREATED);
   }

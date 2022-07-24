@@ -1,21 +1,19 @@
 package lab.waa.three.databasedemo.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lab.waa.three.databasedemo.entity.User;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Data
-@Entity
+@Schema(description = "User Dto")
 public class AddressDto {
-  @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
   private int id;
 
   private String street;
   private String zip;
   private String city;
 
-  @OneToOne
   private User user;
 }

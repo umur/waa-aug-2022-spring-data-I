@@ -1,9 +1,7 @@
 package lab.waa.three.databasedemo.controller;
 
 import lab.waa.three.databasedemo.dto.AddressDto;
-import lab.waa.three.databasedemo.dto.AddressDto;
 import lab.waa.three.databasedemo.service.AddressService;
-import lab.waa.three.databasedemo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
