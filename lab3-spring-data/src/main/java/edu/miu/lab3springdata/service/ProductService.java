@@ -8,7 +8,9 @@ public interface ProductService {
     public void save(ProductDto productDto);
     public List<ProductDto> findAll();
     public ProductDto findById(int id);
-    public List<ProductDto> findAllByPriceGreaterThan(float minPrice);
+    public List<ProductDto> findAllByPriceGreaterThanEqual(float minPrice);
+    public List<ProductDto> findAllByCategoryIdAndPriceLessThanEqual(int categoryId, float maxPrice);
+    public List<ProductDto> findAllByNameIsLikeIgnoreCase(String keyword);
     public void update(ProductDto productDto);
     public void delete(int id);
 }

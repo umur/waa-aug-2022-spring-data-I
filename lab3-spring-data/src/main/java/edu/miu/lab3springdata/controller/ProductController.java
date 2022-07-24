@@ -32,11 +32,14 @@ public class ProductController {
     @GetMapping("/search")
     public List<ProductDto> searchProducts(@RequestParam Map<String, String> params) {
         if(params.containsKey("minPrice")) {
-            return productService.findAllByPriceGreaterThan(Float.parseFloat(params.get("minPrice")));
-        } else if(params.containsKey("maxPrice")) {
-
-        } else if(params.containsKey("id")) {
-
+            var minPrice = Float.parseFloat(params.get("minPrice"));
+            return productService.findAllByPriceGreaterThanEqual(minPrice);
+        } else if(params.containsKey("maxPrice") && params.containsKey("categoryId")) {
+            var categoryId = Integer.parseInt(params.get("categoryId"));
+            var maxPrice = Float.parseFloat(params.get("maxPrice"));
+            return productService.findAllByCategoryIdAndPriceLessThanEqual(categoryId, maxPrice);
+        } else if(params.containsKey("keyword")) {
+            return productService.findAllByNameIsLikeIgnoreCase(params.get("keyword"));
         }
         return null;
     }

@@ -8,5 +8,7 @@ import java.util.List;
 
 @Repository
 public interface ProductRepo extends CrudRepository<Product, Integer> {
-    public List<Product> findAllByPriceGreaterThan(float minPrice);
+    public List<Product> findAllByPriceGreaterThanEqual(float minPrice);
+    public List<Product> findAllByCategoryIdAndPriceLessThanEqual(int categoryId, float maxPrice);
+    public List<Product> findAllByNameIsLikeIgnoreCase(String keyword);
 }

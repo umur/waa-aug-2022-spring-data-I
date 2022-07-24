@@ -1,11 +1,13 @@
 package edu.miu.lab3springdata.controller;
 
+import edu.miu.lab3springdata.dto.ProductDto;
 import edu.miu.lab3springdata.dto.ReviewDto;
 import edu.miu.lab3springdata.service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/reviews")
@@ -22,6 +24,15 @@ public class ReviewController {
     @GetMapping
     public List<ReviewDto> findAll() {
         return reviewService.findAll();
+    }
+
+    @GetMapping("/search")
+    public List<ReviewDto> searchProducts(@RequestParam Map<String, String> params) {
+        if (params.containsKey("productId")) {
+            var productId = Integer.parseInt(params.get("productId"));
+            return reviewService.findAllByProductId(productId);
+        }
+        return null;
     }
 
     @GetMapping("/{id}")

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ProdcutServiceImpl implements ProductService {
+public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepo productRepo;
 
@@ -39,8 +39,20 @@ public class ProdcutServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductDto> findAllByPriceGreaterThan(float minPrice) {
-        var products = productRepo.findAllByPriceGreaterThan(minPrice);
+    public List<ProductDto> findAllByPriceGreaterThanEqual(float minPrice) {
+        var products = productRepo.findAllByPriceGreaterThanEqual(minPrice);
+        return products.stream().map(p -> modelMapper.map(p, ProductDto.class)).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductDto> findAllByCategoryIdAndPriceLessThanEqual(int categoryId, float maxPrice) {
+        var products = productRepo.findAllByCategoryIdAndPriceLessThanEqual(categoryId, maxPrice);
+        return products.stream().map(p -> modelMapper.map(p, ProductDto.class)).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductDto> findAllByNameIsLikeIgnoreCase(String keyword) {
+        var products = productRepo.findAllByNameIsLikeIgnoreCase("%" + keyword + "%");
         return products.stream().map(p -> modelMapper.map(p, ProductDto.class)).collect(Collectors.toList());
     }
 

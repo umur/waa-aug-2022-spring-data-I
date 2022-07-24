@@ -1,5 +1,6 @@
 package edu.miu.lab3springdata.dto;
 
+import edu.miu.lab3springdata.entity.Product;
 import lombok.Data;
 @Data
 public class ReviewDto {
@@ -7,4 +8,5 @@ public class ReviewDto {
     private String comment;
 
     private UserDto user;
+    private ProductDto product;
 }
