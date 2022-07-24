@@ -55,4 +55,14 @@ public class ReviewServiceImpl implements ReviewService {
   public ReviewDto findById(int id) {
     return mapper.toDTO(repository.findById(id).orElse(null));
   }
+
+  @Override
+  public List<ReviewDto> findReviewsByProductId(int productId) {
+    var result = new ArrayList<ReviewDto>();
+    var data = repository.findReviewsByUserId(productId);
+
+    data.forEach(d -> result.add(mapper.toDTO(d)));
+
+    return result;
+  }
 }

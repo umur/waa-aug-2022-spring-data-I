@@ -1,11 +1,8 @@
 package lab.waa.three.databasedemo.service.impl;
 
 import lab.waa.three.databasedemo.dto.ProductDto;
-import lab.waa.three.databasedemo.mapper.AddressMapper;
 import lab.waa.three.databasedemo.mapper.ProductMapper;
-import lab.waa.three.databasedemo.reposoitory.AddressRepository;
 import lab.waa.three.databasedemo.reposoitory.ProductRepository;
-import lab.waa.three.databasedemo.service.AddressService;
 import lab.waa.three.databasedemo.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.var;
@@ -17,36 +14,65 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
-  private final ProductRepository addressRepository;
-  private final ProductMapper addressMapper;
+  private final ProductRepository repository;
+  private final ProductMapper mapper;
 
   @Override
   public void save(ProductDto dto) {
-    addressRepository.save(addressMapper.toModel(dto));
+    repository.save(mapper.toModel(dto));
   }
 
   @Override
   public void delete(int id) {
-    addressRepository.deleteById(id);
+    repository.deleteById(id);
   }
 
   @Override
   public void update(int id, ProductDto dto) {
-    addressRepository.save(addressMapper.toModel(dto));
+    repository.save(mapper.toModel(dto));
   }
 
   @Override
   public List<ProductDto> findAll() {
     var result = new ArrayList<ProductDto>();
-    var data = addressRepository.findAll();
+    var data = repository.findAll();
 
-    data.forEach(d -> result.add(addressMapper.toDTO(d)));
+    data.forEach(d -> result.add(mapper.toDTO(d)));
 
     return result;
   }
 
   @Override
   public ProductDto findById(int id) {
-    return addressMapper.toDTO(addressRepository.findById(id).orElse(null));
+    return mapper.toDTO(repository.findById(id).orElse(null));
+  }
+
+  @Override
+  public List<ProductDto> findProductByPriceGreaterThan(double minPrice) {
+    var result = new ArrayList<ProductDto>();
+    var data = repository.findProductByPriceGreaterThan(minPrice);
+
+    data.forEach(d -> result.add(mapper.toDTO(d)));
+
+    return result;  }
+
+  @Override
+  public List<ProductDto> findProductByCategoryIdAndPriceLessThan(int id, double maxPrice) {
+    var result = new ArrayList<ProductDto>();
+    var data = repository.findProductByCategoryIdAndPriceLessThan(id, maxPrice);
+
+    data.forEach(d -> result.add(mapper.toDTO(d)));
+
+    return result;
+  }
+
+  @Override
+  public List<ProductDto> findProductByCategoryNameContains(String keyword) {
+    var result = new ArrayList<ProductDto>();
+    var data = repository.findProductByCategoryNameContains(keyword);
+
+    data.forEach(d -> result.add(mapper.toDTO(d)));
+
+    return result;
   }
 }

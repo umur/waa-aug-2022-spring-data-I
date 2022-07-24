@@ -3,6 +3,7 @@ package lab.waa.three.databasedemo.service;
 import lab.waa.three.databasedemo.dto.ProductDto;
 import lab.waa.three.databasedemo.dto.ReviewDto;
 import lab.waa.three.databasedemo.dto.UserDto;
+import lab.waa.three.databasedemo.entity.Review;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,4 +19,6 @@ public interface ReviewService {
   List<ReviewDto> findAll();
 
   ReviewDto findById(int id);
+
+  List<ReviewDto> findReviewsByProductId(int productId);
 }

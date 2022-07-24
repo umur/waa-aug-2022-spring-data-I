@@ -17,4 +17,10 @@ public interface ProductService {
   List<ProductDto> findAll();
 
   ProductDto findById(int id);
+
+  List<ProductDto> findProductByPriceGreaterThan(double minPrice);
+
+  List<ProductDto> findProductByCategoryIdAndPriceLessThan(int id, double maxPrice);
+
+  List<ProductDto> findProductByCategoryNameContains(String keyword);
 }
