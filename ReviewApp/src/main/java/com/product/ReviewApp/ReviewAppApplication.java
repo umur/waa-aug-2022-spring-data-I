@@ -17,5 +17,4 @@ public class ReviewAppApplication {
 	ModelMapper mapper() {
 		return new ModelMapper();
 	}
-
 }
