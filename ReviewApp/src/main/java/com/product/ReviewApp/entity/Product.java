@@ -20,18 +20,19 @@ public class Product {
     private float price;
     private int rating;
 
-    @JoinColumn(name = "product_id")
+//    @JoinColumn(name = "product_id")
     @JsonManagedReference
-    @OneToMany
+    @OneToMany(mappedBy = "product")
     private List<Review> reviews;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonBackReference
     @Fetch(FetchMode.SELECT)
     private Category category;
 
     public void addReview(Review review) {
         reviews.add(review);
+        review.setProduct(this);
     }
 }
 

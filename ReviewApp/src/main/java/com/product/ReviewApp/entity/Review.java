@@ -19,4 +19,8 @@ public class Review {
     @Fetch(FetchMode.JOIN)
     @JsonBackReference
     private User user;
+
+    @ManyToOne
+    @JsonBackReference
+    private Product product;
 }

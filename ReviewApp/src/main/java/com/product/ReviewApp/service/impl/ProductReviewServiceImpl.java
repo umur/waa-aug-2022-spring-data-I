@@ -40,6 +40,15 @@ public class ProductReviewServiceImpl implements ProductReviewService  {
     }
 
     @Override
+    public List<ReviewDto> allReviews(int productId) {
+        return reviewRepo.findAllByProductId(productId)
+                .stream()
+                .map(review -> mapper.map(review, ReviewDto.class))
+                .toList();
+    }
+
+
+    @Override
     public Optional<ReviewDto> add(int productId, ReviewDto reviewDto) {
         Optional<Product> product = productRepo.findById(productId);
 

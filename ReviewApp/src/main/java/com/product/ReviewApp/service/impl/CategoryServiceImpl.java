@@ -26,7 +26,6 @@ public class CategoryServiceImpl implements CategoryService {
     public List<CategoryDto> findAll() {
         List<Category> categories = new ArrayList<>();
         categoryRepo.findAll().forEach(categories::add);
-        System.out.println(categories);
         return categories.stream()
                 .map(this::categoryDto)
                 .toList();

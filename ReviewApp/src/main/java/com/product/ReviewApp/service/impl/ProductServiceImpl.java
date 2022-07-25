@@ -2,7 +2,6 @@ package com.product.ReviewApp.service.impl;
 
 import com.product.ReviewApp.Dto.ProductDto;
 import com.product.ReviewApp.entity.Product;
-import com.product.ReviewApp.repository.CategoryRepo;
 import com.product.ReviewApp.repository.ProductRepo;
 import com.product.ReviewApp.service.ProductService;
 import org.modelmapper.ModelMapper;
@@ -16,12 +15,10 @@ import java.util.Optional;
 public class ProductServiceImpl implements ProductService {
 
     private final ProductRepo productRepo;
-    private final CategoryRepo categoryRepo;
     private final ModelMapper modelMapper;
 
-    public ProductServiceImpl(ProductRepo productRepo, CategoryRepo categoryRepo, ModelMapper modelMapper) {
+    public ProductServiceImpl(ProductRepo productRepo, ModelMapper modelMapper) {
         this.productRepo = productRepo;
-        this.categoryRepo = categoryRepo;
         this.modelMapper = modelMapper;
     }
 
@@ -53,4 +50,39 @@ public class ProductServiceImpl implements ProductService {
     public void delete(int id) {
         productRepo.deleteById(id);
     }
+
+    @Override
+    public List<ProductDto> filterByMinPrice(float minPrice) {
+        return productRepo.findAllByPriceGreaterThanEqual(minPrice)
+                .stream()
+                .map(product -> modelMapper.map(product, ProductDto.class))
+                .toList();
+    }
+
+    @Override
+    public List<ProductDto> filterByName(String keyword) {
+        return productRepo.findAllByNameContaining(keyword)
+                .stream()
+                .map(product -> modelMapper.map(product, ProductDto.class))
+                .toList();
+
+    }
+
+    @Override
+    public List<ProductDto> filterByCategoryNameAndMaxPrice(String categoryName, float maxPrice) {
+        return productRepo.findAllByCategoryNameAndPriceLessThanEqual(categoryName, maxPrice)
+                .stream()
+                .map(product -> modelMapper.map(product, ProductDto.class))
+                .toList();
+
+    }
+
+    @Override
+    public List<ProductDto> filterByMinPrice(float minPrice, float maxPrice, String keyword, String categoryName) {
+        return productRepo.findAllByPriceGreaterThanEqualAndPriceLessThanEqualAndNameContainingIgnoreCaseAndCategoryNameContaining(minPrice, maxPrice, keyword, categoryName)
+                .stream()
+                .map(product -> modelMapper.map(product, ProductDto.class))
+                .toList();
+    }
+
 }

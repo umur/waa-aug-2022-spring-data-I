@@ -9,6 +9,9 @@ import java.util.Optional;
 
 public interface ProductReviewService {
         List<ReviewDto> reviews(int productId);
+
+        List<ReviewDto> allReviews(int productId);
+
         Optional<ReviewDto> add(int productId, ReviewDto reviewDto);
 
         Optional<ReviewDto> review(int productId, int reviewId);

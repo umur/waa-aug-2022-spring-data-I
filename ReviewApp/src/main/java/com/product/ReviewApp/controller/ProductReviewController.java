@@ -22,6 +22,11 @@ public class ProductReviewController {
         return productReviewService.reviews(productId);
     }
 
+    @GetMapping("/all")
+    public List<ReviewDto> findWithProductId(@PathVariable int productId) {
+        return productReviewService.allReviews(productId);
+    }
+
     @PostMapping
     public Optional<ReviewDto> create(@PathVariable int productId, @RequestBody ReviewDto reviewDto) {
         return productReviewService.add(productId, reviewDto);

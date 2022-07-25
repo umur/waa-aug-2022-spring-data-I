@@ -238,6 +238,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Filter by min price",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get all reviews by product id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/products/23/reviews/all",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"products",
+						"23",
+						"reviews",
+						"all"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
