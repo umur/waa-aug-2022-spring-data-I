@@ -50,16 +50,16 @@ public class ProductServiceImpl implements ProductService {
   @Override
   public List<ProductDto> findProductByPriceGreaterThan(double minPrice) {
     var result = new ArrayList<ProductDto>();
-    var data = repository.findProductByPriceGreaterThan(minPrice);
+    var data = repository.findAllByPriceGreaterThan(minPrice);
 
     data.forEach(d -> result.add(mapper.toDTO(d)));
 
     return result;  }
 
   @Override
-  public List<ProductDto> findProductByCategoryIdAndPriceLessThan(int id, double maxPrice) {
+  public List<ProductDto> findProductByCategoryIdAndPriceLessThan(String categoryName, double maxPrice) {
     var result = new ArrayList<ProductDto>();
-    var data = repository.findProductByCategoryIdAndPriceLessThan(id, maxPrice);
+    var data = repository.findAllByCategoryNameAndPriceLessThan(categoryName, maxPrice);
 
     data.forEach(d -> result.add(mapper.toDTO(d)));
 

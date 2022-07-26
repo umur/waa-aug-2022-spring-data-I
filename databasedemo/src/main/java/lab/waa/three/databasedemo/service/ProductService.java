@@ -20,7 +20,7 @@ public interface ProductService {
 
   List<ProductDto> findProductByPriceGreaterThan(double minPrice);
 
-  List<ProductDto> findProductByCategoryIdAndPriceLessThan(int id, double maxPrice);
+  List<ProductDto> findProductByCategoryIdAndPriceLessThan(String categoryName, double maxPrice);
 
   List<ProductDto> findProductByCategoryNameContains(String keyword);
 }

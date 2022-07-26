@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends CrudRepository<Product, Integer> {
-  List<Product> findProductByPriceGreaterThan(double minPrice);
-  List<Product> findProductByCategoryIdAndPriceLessThan(int id, double maxPrice);
+  List<Product> findAllByPriceGreaterThan(double minPrice);
+  List<Product> findAllByCategoryNameAndPriceLessThan(String categoryName, double maxPrice);
   List<Product> findProductByCategoryNameContains(String keyword);
 }

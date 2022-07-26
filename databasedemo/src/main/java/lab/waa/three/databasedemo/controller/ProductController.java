@@ -58,8 +58,8 @@ public class ProductController {
     if(args.containsKey("minPrice")){
       return ResponseEntity.ok(service.findProductByPriceGreaterThan(Double.parseDouble(args.get("minPrice"))));
     }
-    if(args.containsKey("maxPrice") && args.containsKey("categoryId")) {
-      return ResponseEntity.ok(service.findProductByCategoryIdAndPriceLessThan(Integer.parseInt(args.get("categoryId")), Double.parseDouble(args.get("maxPrice"))));
+    if(args.containsKey("maxPrice") && args.containsKey("categoryName")) {
+      return ResponseEntity.ok(service.findProductByCategoryIdAndPriceLessThan(args.get("categoryName"), Double.parseDouble(args.get("maxPrice"))));
     }
 
     if(args.containsKey("keyword")) {
