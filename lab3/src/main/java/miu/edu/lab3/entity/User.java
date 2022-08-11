@@ -18,9 +18,9 @@ public class User {
     private String lastname;
 
     @JoinColumn(name = "user_id")
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL,  fetch = FetchType.EAGER)
     private List<Review> reviews;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Address address;
 }

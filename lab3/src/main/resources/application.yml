@@ -5,13 +5,13 @@ spring:
     name: spring-data-lab-3
   datasource:
     password: postgrespw
-    url: jdbc:postgresql://localhost:49154/lab_3
+    url: jdbc:postgresql://localhost:5432/lab_3
     driver-class-name: org.postgresql.Driver
     username: postgres
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
